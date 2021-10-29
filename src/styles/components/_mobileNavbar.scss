@@ -1,0 +1,49 @@
+.mobile-button {
+  z-index: 999999;
+  cursor: pointer;
+  position: absolute;
+  width: 40px;
+  height: 120px;
+  right: 60px;
+}
+
+.addTransition {
+  transform: translateX(100%);
+  transition: transform 0.8s ease-in-out;
+}
+.removeTransition {
+  transform: translateX(0);
+  transition: transform 0.8s ease-in-out;
+}
+
+#mobile-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+  padding: 48px;
+  z-index: 22222;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#mobile-nav div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.internal {
+  font-size: 48px;
+  line-height: 64px;
+  flex: 1;
+}
+
+.external {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}

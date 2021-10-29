@@ -1,0 +1,15 @@
+.section {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+.section-pad {
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.container {
+  max-width: 810px;
+  margin: auto;
+}

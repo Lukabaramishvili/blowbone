@@ -1,0 +1,70 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+// html {
+//   // font-size: calc(100vw / 1920 * 10);
+
+//   // @include media("<phone") {
+//   //   font-size: calc(100vw / 750 * 10);
+//   // }
+// }
+
+body {
+  font-size: 1.2rem;
+  font-family: $font-suisse-bp;
+
+  /* background-image: url("./images/cover.jpg"); */
+  background-size: 100% auto;
+  background-position: center top;
+}
+
+a {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.heading {
+  color: $color-black;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #000000;
+
+  font-family: "HK-Grotesk-Bold", sans-serif;
+  font-size: 110px;
+  line-height: 1;
+}
+
+// .button {
+//   display: inline-block;
+//   background-color: var(--orange);
+//   color: #fff;
+//   text-transform: uppercase;
+//   letter-spacing: 0.05em;
+//   border: none;
+//   padding: 24px 72px;
+//   font-family: "HK-Grotesk-Bold", sans-serif;
+// }
+
+.container {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}

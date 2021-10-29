@@ -1,64 +1,22 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import "./styles.css";
+import Logo from "./logo";
+import Navbar from "../Navbar";
+import { DeviceSize } from "../../responsive";
+import { useMediaQuery } from "react-responsive";
+import MobileNavbar from "../Navbar/mobileNavbar";
 
 const Header = () => {
+  const isMobile = useMediaQuery({ maxWidth: DeviceSize.mobile });
+
   return (
-    <div>
-      <header className="header-desktop"></header>
-      <header className="header">
-        <nav className="nav">
-          <span className="flex justify-center mb2 mb4-ns logo-container">
-            <NavLink exact to="/">
-              <img
-                src={require(`../../images/logo.svg`)}
-                alt="Blowbone-logo"
-                className="logo-svg"
-              />
-            </NavLink>
-          </span>
-          <ul className="nav-list flex flex-wrap justify-center bold">
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/"
-                className="nav-link"
-                activeClassName="selected"
-              >
-                Home
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                to="/products"
-                className="nav-link"
-                activeClassName="selected"
-              >
-                Products
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                to="/about"
-                className="nav-link"
-                activeClassName="selected"
-              >
-                About
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                to="/about"
-                className="nav-link"
-                activeClassName="selected"
-              >
-                Contact Us
-              </NavLink>
-            </li>
-          </ul>
-        </nav>
-      </header>
-    </div>
+    <>
+      {/* <div className="navbar-container"> */}
+      {/* <div className="left-section">
+          <Logo />
+        </div> */}
+      {!isMobile ? <Navbar /> : <MobileNavbar />}
+      {/* </div> */}
+    </>
   );
 };
 
